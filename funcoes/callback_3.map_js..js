@@ -32,19 +32,27 @@ const carrinho = [
 ]
 
 
-const getNome = item => item.nome
+/*const getNome = item => item.nome
 console.log(carrinho.map(getNome))
 
 
 const getTotal = item => item.qtde * item.preco
 const totais = carrinho.map(getTotal)
-console.log(totais)
+console.log(totais)*/
 
 Array.prototype.meuMap = function(fn) {
-    const mapped = []
+    const novoArray = []
     for(let i = 0; i < this.length; i++) {
-        mapped.push()
-        fn(this[i], i,this)
-            
-    }
+        const resultado = fn (this[i], i, this)
+        novoArray.push(resultado)
+    } 
+    return novoArray
 }
+
+const getNome = item => item.nome
+console.log(carrinho.meuMap(getNome))
+
+
+const getTotal = item => item.qtde * item.preco
+const totais = carrinho.meuMap(getTotal)
+console.log(resultado)
