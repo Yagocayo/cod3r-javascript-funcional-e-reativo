@@ -1,3 +1,36 @@
+/*
+função map
+[1, 2, 3, 4].map (função)
+                transforma
+resultado de uma função map sempre vai ter o mesmo tamanho do array original 
+exemplo se tiver 10 posições o resultado sera 10 posições so que trans formado os resultados conforme a função passada 
+
+ex:array 
+ 
+
+vai pegar o array e transformar em outro array com o mesmo tamanho atraves da função map passada
+
+função vai ser (elemento * 2)
+[3, 2, 4, 5, 6, 3]
+
+fn = el * 2 de transformação
+
+3 * 2 = [6]  
+2 * 2 = [4]  
+4 * 2 = [8]  
+5 * 2 = [10]
+6 * 2 = [12]
+3 * 2 = [6]
+
+resultado novo array com o mesmo tamanho e mapeado
+[6, 4, 8, 10, 12, 6]
+
+
+
+*/
+
+
+
 const nums = [1, 2, 3, 4, 5]
 const dobro = (n) => n * 2 
 console.log(nums.map(dobro))

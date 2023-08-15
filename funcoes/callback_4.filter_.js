@@ -1,4 +1,21 @@
 
+/* array.filter(função)
+
+filter ele filtra as informaçoes de um array faz um teste boleano de verdadeiro(true) e falso(false) 
+
+[6, 5, 7, 3, 9, 10]
+
+ex: vamos filtrar apenas as notas que sejam >= a 7
+o novo array gerado sera 
+fn: elemento >= 7
+
+[7, 9, 10]
+
+
+*/
+
+
+
 const carrinho = [
     {nome: 'caneta',qtde: 10, preco: 7.99},
     {nome: 'impressora', qtde:0, preco: 649.50},
