@@ -88,4 +88,4 @@ console.log(carrinho.meuMap(getNome))
 
 const getTotal = item => item.qtde * item.preco
 const totais = carrinho.meuMap(getTotal)
-console.log(resultado)
+console.log(totais)

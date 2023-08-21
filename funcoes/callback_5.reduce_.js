@@ -33,7 +33,7 @@ ex: 1 * 2 = 2 -->
     2 * 3 = 6 -->
     6 * 4 = 24
 
-exemplo passano o primeiro parametro sendo 1
+exemplo passando o primeiro parametro sendo 1
 
 ex: 1 * 1 = 1 -->
     1 * 2 = 2 -->

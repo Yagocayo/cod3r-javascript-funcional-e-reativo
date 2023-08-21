@@ -3,11 +3,11 @@ const path = require('path')
 
 const caminho = path.join(__dirname, 'dados.txt')
 
-function exibirConeudo(err, conteudo) {
+function exibirConteudo(err, conteudo) {
     console.log(conteudo.toString())
 }
 console.log('inicio..')
-fs.readFile(caminho,{}, exibirConeudo)
+fs.readFile(caminho,{}, exibirConteudo)
 fs.readFile(caminho,(_, conteudo) => console.log(conteudo.toString()))
 console.log('fim..')
 

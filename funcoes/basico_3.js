@@ -4,7 +4,7 @@ const felizNatal = () => console.log('feliz natal!')// quando nao tiver parametr
 
 felizNatal()
 
-const saudacao = nome => `Fala ${nome}, blz!!!`//quando tiver apenas 1 parametro pode se tirar os parenteses ex:  nome => se tiver mais de 1 e nescessario colocar os parenteses
+const saudacao = nome => `Fala ${nome}, blz!!!`//quando tiver apenas 1 parametro pode se tirar os parenteses ex:  (nome) =>, nome =>,   se tiver mais de 1 e nescessario colocar os parenteses
 console.log(saudacao('maria'))
 
 //const somar = numeros => { usando array
