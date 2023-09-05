@@ -26,14 +26,39 @@ esperarPor(2000)
     console.log('Async/await 3')
   }*/
   
-  executar()
+function retornarValor(){
+      return new Promise(resolve => {
+        setTimeout(() => resolve(10), 5000)
+      })
+}
 
-  async function executar() {
+async function retornarValorRapido(){
+  return 20
+
+}
+
+async function executar() {
+    let valor = await retornarValorRapido()
+
     await esperarPor(1500)
-    console.log('Async/await 1')
+    console.log(`Async/await.. ${valor}`)
+
     await esperarPor(1500)
-    console.log('Async/await 2')
+    console.log(`Async/await.. ${valor + 1}`)
+
     await esperarPor(1500)
-    console.log('Async/await 3')
-  }
-  executar()
+    console.log(`Async/await.. ${valor + 2}`)
+
+    return valor + 3
+}
+
+async function executarDeVerade() {
+  const valor = await executar()
+  console.log(valor)
+}
+
+executar().then(console.log)
+
+
+// await faz a execução do codigo como de fosse um codigo sincrono
+//por tras de todo await tem que ter uma promisse 
