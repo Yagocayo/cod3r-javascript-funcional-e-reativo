@@ -1,7 +1,7 @@
 function Produto(nome, preco, desc = 0.50) {
     this.nome = nome 
     this.preco = preco
-    this.desc = _desc
+    this._desc = desc
 
     this.precoFinal = function() {
         return this.preco * (1 - this._desc)
@@ -10,18 +10,23 @@ function Produto(nome, preco, desc = 0.50) {
 }
 
 Produto.prototype.log = function() {
-    console.log(`Nome: ${this._nome} Preco: R$${this.preco}`)
+    console.log(`Nome: ${this.nome} Preco: R$ ${this.preco}`)
     
 }
-Object.defineProperty(Produto.prototype, 'desc', {
+Object.defineProperty(Produto.prototype,'desc', {
     get: function() {
         return this._desc
+    },
+    set: function(novoDesc) {
+        if(novoDesc >= 0 && novoDesc <= 1) {
+            this._desc = novoDesc
+        }
     }
 } )
 
-Object.defineProperty(Produto.prototype, 'descString', {
+Object.defineProperty(Produto.prototype,'descString', {
     get: function() {
-        return `${this._desc * 100}%`
+        return `${this._desc * 100}% de desconto`
     }
 } )
 
@@ -33,5 +38,6 @@ p1.log()
 const p2 = new Produto('geladeira', 3000)
 console.log(p2.preco)
 console.log(p2.precoFinal())
+p2.desc = 0.99
 console.log(p2.desc)
 console.log(p2.descString)
