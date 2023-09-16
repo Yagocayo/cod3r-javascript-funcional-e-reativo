@@ -19,6 +19,23 @@ function lerDiretorio(caminho) {
 
 }
 
+function lerArquivo(caminho) {
+    return new Promise((resolve, reject) => {
+        try{
+            const conteudo = fs.readFileSync (caminho, {encoding: 1'})
+        } catch(e) {
+
+        }
+       
+}
+
+function lerArquivos()
+
+function elementosTerninadosCom (array, padrao) {
+    return array.filter(el => el.endsWith(padrao))
+}
+
 module.exports = {
-    lerDiretorio
+    lerDiretorio,
+    elementosTerninadosCom
 }

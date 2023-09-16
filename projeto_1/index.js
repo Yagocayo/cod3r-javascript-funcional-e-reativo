@@ -4,4 +4,5 @@ const fn = require('./funcoes')
 const caminho = path.join(__dirname,'..', 'dados', 'legendas')
 
 fn.lerDiretorio(caminho)
-.then(console.log)
+  .then(arquivos => fn.elementosTerninadosCom(arquivos, '.srt'))
+  .then(console.log)
