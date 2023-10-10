@@ -8,7 +8,7 @@ bomDia()
 
 //function expression
 const boaTarde = function () {
-    console.log('boa tarde!')
+    console.log('boa tarde!') 
 }
 
 boaTarde()
