@@ -3,7 +3,7 @@
 function bomDia() {
     console.log('Bom dia!')
 }
-//function expression (função anonima)
+//function expression (função anonima) normalmente ao se usar function expression se usa uma função anonima sem dar parametros
 const boaTarde = function () {
     console.log('Boa tarde!')
 }
@@ -19,6 +19,9 @@ executarQualquerCoisa(3)
 executarQualquerCoisa(bomDia)
 executarQualquerCoisa(boaTarde)
 
+//1 == '1' = true compara valores
+//1 === '1' = false compara valores e tipos 
+
 //02 retornar uma função a partir de uma outra função
 
 function potencia(base) {
@@ -28,6 +31,7 @@ function potencia(base) {
 }
 const potenciaDe2 = potencia(2)
 console.log(potenciaDe2(8))
+
 const pot34 = potencia(3)(4)
 console.log(pot34)
 

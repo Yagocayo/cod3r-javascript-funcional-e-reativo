@@ -13,6 +13,10 @@ const boaTarde = function () {
 
 boaTarde()
 
+//function somar(a=0, b=0) {
+//    return a + b
+//} posso definir um numero para os parametros para nao dar um NaN
+
 function somar(a, b) {
     return a + b
 }
