@@ -1,7 +1,7 @@
-const fs = require('fs')
+const fs = require('fs') // bibliotecas dentro do node , fs , path
 const path = require('path')
 
-const caminho = path.join(__dirname, 'dados.txt')
+const caminho = path.join(__dirname, 'dados.txt') //path.join junta os caminhos em um só colocando as barras da forma correta, e o ___dirname da o diretorio que está
 
 function exibirConteudo(err, conteudo) {
     console.log(conteudo.toString())

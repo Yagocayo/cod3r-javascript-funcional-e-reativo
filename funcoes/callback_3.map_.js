@@ -50,11 +50,12 @@ console.log(nums1.map(dobro1))
 
 
 const nomes = ['Ana', 'Bia', 'Gui', 'Lia', 'Rafa' ]
-const primeiraLetra = texto => texto[0]
+const primeiraLetra = texto => texto[0] //consigo acessar a primeira letra das palavras atravez do indice entre cochetes [] 
 const letras = nomes.map(primeiraLetra)
 console.log(nomes, letras)
 
 
+// array de objetos
 
 const carrinho = [
     {nome: 'caneta',qtde: 10, preco: 7.99},
@@ -72,6 +73,13 @@ console.log(carrinho.map(getNome))
 const getTotal = item => item.qtde * item.preco
 const totais = carrinho.map(getTotal)
 console.log(totais)*/
+
+/*const getNome = item => item.nome
+console.log(carrinho.map(function(value) {
+    return getNome(value)
+}))
+
+*/
 
 Array.prototype.meuMap = function(fn) {
     const novoArray = []
