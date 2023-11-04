@@ -10,15 +10,9 @@ function lerDiretorio(caminho) {
         } 
         catch(e) {
             reject(e)
-
         }
-        
-
     })
-    
-
 }
-
 function lerArquivo(caminho) {
     return new Promise((resolve, reject) => {
         try{
@@ -29,7 +23,6 @@ function lerArquivo(caminho) {
         }
     }) 
 }
-
 function lerArquivos(caminhos){
     return Promise.all(caminhos.map(caminho => lerArquivo(caminho)))
 }
@@ -38,9 +31,14 @@ function  elementosTerninadosCom (array, padrao) {
     return array.filter(el => el.endsWith(padrao))
 }
 
+function removerSeVazio(array) {
+    return array.filter(el => el.trim())
+}
+
 module.exports = {
     lerDiretorio,
     lerArquivo,
     lerArquivos,
-    elementosTerninadosCom
+    elementosTerninadosCom,
+    removerSeVazio
 }
