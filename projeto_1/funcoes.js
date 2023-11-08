@@ -43,6 +43,17 @@ function removerSeApenasNumeros(array) {
         return num !== num
     } )
 }
+function removerSimbolos(simbolos){
+    return function(array) {
+        return array.map(el => {
+            let textoSemSimbolos= el
+            simbolos.forEach(simbolos => {
+                textoSemSimbolos = textoSemSimbolos.split(simbolos).join('')
+            })
+            return textoSemSimbolos
+        })
+    }
+}
 
 
 module.exports = {
@@ -52,5 +63,6 @@ module.exports = {
     elementosTerninadosCom,
     removerSeVazio,
     removerSeIncluir,
-    removerSeApenasNumeros
+    removerSeApenasNumeros,
+    removerSimbolos
 }
