@@ -55,6 +55,7 @@ function removerSimbolos(simbolos){
     }
 }
 
+const mesclarElementos = array => array.join(' ')
 
 module.exports = {
     lerDiretorio,
@@ -64,5 +65,7 @@ module.exports = {
     removerSeVazio,
     removerSeIncluir,
     removerSeApenasNumeros,
-    removerSimbolos
+    removerSimbolos,
+    mesclarElementos
+    
 }

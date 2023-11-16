@@ -6,17 +6,20 @@ const caminho = path.join(__dirname,'..', 'dados', 'legendas')
 const simbolos = [
   '.', '?', '-', ',','"','♪', '_', '<i>', '</i>', '/r', '[', ']', '(', ')','\r', '`', "'",
 ]
-const mesclarConteudos = conteudos => conteudos.join('\n')
+
+const separarPorLinhas = todoConteudo => todoConteudo.split('\n')
+const separarPorPalavras = todoConteudo => todoConteudo.split(' ')
 
 fn.lerDiretorio(caminho)
   .then(arquivos => fn.elementosTerninadosCom(arquivos, '.srt'))
   .then(arquivosSRT => fn.lerArquivos(arquivosSRT))
-  .then(mesclarConteudos)
-  .then(todoConteudo => todoConteudo.split('\n'))
+  .then(fn.mesclarElementos)
+  .then(separarPorLinhas)
   .then(linhas => fn.removerSeVazio(linhas))
   .then(linhas => fn.removerSeIncluir(linhas, '-->'))
   .then(linhas => fn.removerSeApenasNumeros(linhas))
   .then (fn.removerSimbolos(simbolos))
-  .then(mesclarConteudos)
+  .then(mesclarElementos)
   .then(separarPorPalavras)
+  .then(linhas => fn.removerSeVazio(linhas))
   .then(console.log)
