@@ -10,6 +10,8 @@ const simbolos = [
 const separarPorLinhas = todoConteudo => todoConteudo.split('\n')
 const separarPorPalavras = todoConteudo => todoConteudo.split(' ')
 
+
+
 fn.lerDiretorio(caminho)
   .then(arquivos => fn.elementosTerninadosCom(arquivos, '.srt'))
   .then(arquivosSRT => fn.lerArquivos(arquivosSRT))
